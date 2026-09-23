@@ -63,7 +63,18 @@ public class Main {
         }
 
         //Opgave 3
+        BankAccount account1 = new BankAccount("James", 300);
+        account1.deposit(3000);
+        account1.deposit(1400);
+        account1.deposit(2000);
+        account1.withdraw(750);
+        account1.withdraw(800);
+        account1.printTransactionHistory();
 
+        System.out.println("FINAL BAL: " + account1.getBalance());
+        System.out.println(account1.getLargestTransaction());
+
+        //opgave 4
 
 
 
