@@ -75,6 +75,33 @@ public class Main {
         System.out.println(account1.getLargestTransaction());
 
         //opgave 4
+        Team team1 = new Team("Team 1");
+        Player player1 = new Player("Harry Potter", 33);
+        Player player2 = new Player("Logan Paul", 47);
+        Player player3 = new Player("Jack Daniels", 76);
+        team1.addPlayer(player1);
+        team1.addPlayer(player2);
+        team1.addPlayer(player3);
+
+
+        Team team2 = new Team("Team 2");
+        Player player4 = new Player("Jake Paul", 89);
+        Player player5 = new Player("James Bond", 63);
+        Player player6 = new Player("David Guetta", 68);
+        team2.addPlayer(player4);
+        team2.addPlayer(player5);
+        team2.addPlayer(player6);
+
+
+        team1.printTeam();
+        team2.printTeam();
+
+        team1.compete(team2);
+
+        team1.printBestPlayer();
+        team2.printBestPlayer();
+
+        //Opgave 5
 
 
 
