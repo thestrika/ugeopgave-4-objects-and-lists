@@ -1,8 +1,8 @@
 public class Main {
 
     //Globale
-    Student[] students = new Student[3];
-    String studentId;
+    private Student[] students = new Student[3];
+    private String studentId;
 
 
     //Metoder
@@ -47,8 +47,22 @@ public class Main {
 
 
         //Opgave 2
+        Product pc = new Product("PC", 4000, new String[] {"sale", "electronics", "budget"});
+        Product iphone = new Product("iPhone", 7000, new String[] {"latest", "apple", "hype"});
+        Product macbook = new Product("MacBook", 9000, new String[] {"sale", "electronics", "apple"});
+        Product ipad = new Product("iPad", 5000, new String[] {"sale", "apple", "budget"});
+        Product[] products = new Product[]{pc, iphone, macbook, ipad};
 
+        System.out.println();
+        System.out.println("Products with search query:");
+        for(Product product : products){
+            if(product.hasTag("sale")){
+                product.printInfo();
+                System.out.println();
+            }
+        }
 
+        //Opgave 3
 
 
 
