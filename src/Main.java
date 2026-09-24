@@ -102,6 +102,35 @@ public class Main {
         team2.printBestPlayer();
 
         //Opgave 5
+        System.out.println();
+        Library cphbib = new Library("Copenhagen Library");
+        Book book1 = new Book("Harry Potter", "J.K. Rowling", true);
+        Book book2 = new Book("Indiana Jones", "Someone", true);
+        Book book3 = new Book("Wimpy Kid", "Someone else", false);
+        Book book4 = new Book("Hunger Games", "Someone someone else", false);
+        Book book5 = new Book("Alice in wonderland", "Somebody", true);
+
+        cphbib.addBook(book1);
+        cphbib.addBook(book2);
+        cphbib.addBook(book3);
+        cphbib.addBook(book4);
+        cphbib.addBook(book5);
+
+        System.out.println();
+        cphbib.printAllBooks();
+
+        System.out.println(); // låne
+        book5.borrow();
+        cphbib.printAllBooks();
+
+        System.out.println(); // tilgængelig
+        System.out.println(cphbib.findAvailableBooks());
+
+        System.out.println(); // søge
+        System.out.println(cphbib.findBookByTitle("Wimpy Kid"));
+
+
+        //Opgave 6
 
 
 
