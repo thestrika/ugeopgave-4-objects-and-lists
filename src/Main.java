@@ -131,8 +131,36 @@ public class Main {
 
 
         //Opgave 6
+        Item knife = new Item("Knife", 300, "Weapons");
+        Item gun = new Item("Gun", 600, "Weapons");
+        Item medicine = new Item("Medicine", 300, "Healing");
+        Item bandages = new Item("Bandages", 600, "Healing");
+        Item gloves = new Item("Gloves", 300, "Clothing");
+        Item nvg = new Item("Night vision glasses", 600, "Clothing");
 
+        Inventory playerOne = new Inventory("Gamer1");
+        Inventory playerTwo = new Inventory("Gamer2");
 
+        playerOne.addItem(knife);
+        playerOne.addItem(gloves);
+        playerOne.addItem(nvg);
+
+        playerTwo.addItem(bandages);
+        playerTwo.addItem(gun);
+        playerTwo.addItem(medicine);
+
+        playerOne.printInventory();
+        System.out.println();
+        playerTwo.printInventory();
+
+        System.out.println();
+        System.out.println("Total items created:");
+        System.out.println(Item.getTotalItemsCreated());
+
+        System.out.println("Player 1 total value:");
+        System.out.println(playerOne.getTotalValue());
+        System.out.println("Player 2 total value:");
+        System.out.println(playerTwo.getTotalValue());
 
 
     }
